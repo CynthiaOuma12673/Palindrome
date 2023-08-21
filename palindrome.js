@@ -15,9 +15,20 @@ function reverString(str){
 }
 
 function processInput(){
-    rl(input.trim()===""){
+    rl.question("Enter a word: ", (input) => {
+    if (input.trim()===""){
         console.log('Kindly enter a valid word.');
         rl.close();
         return;
     }
+
+    if (isPalindrome(input)){
+        console.log("It's a palindrome");
+    } else{
+        const reversed = reverString(input);
+        console.log("This is not a palindrome.Reversed:" ,reversed);
+
+    }
+    rl.close();
+});
 }
