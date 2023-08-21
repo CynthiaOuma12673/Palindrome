@@ -32,3 +32,4 @@ function processInput(){
     rl.close();
 });
 }
+processInput();
