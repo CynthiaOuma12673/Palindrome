@@ -13,3 +13,11 @@ function isPalindrome(str){
 function reverString(str){
     return str.split("").reverse().join("");
 }
+
+function processInput(){
+    rl(input.trim()===""){
+        console.log('Kindly enter a valid word.');
+        rl.close();
+        return;
+    }
+}
